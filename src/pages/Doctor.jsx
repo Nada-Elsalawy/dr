@@ -837,7 +837,7 @@ const DoctorDashboard = () => {
           </div>
 
           {/* Main Patient Panel */}
-          <div className="p-8 space-y-6">
+          <div className="p-4 sm:p-6 lg:p-8 space-y-6">
             {!isConsulting ? (
               <div className="flex flex-col items-center justify-center h-full text-slate-400 space-y-4">
                 <span className="text-8xl">🏥</span>
@@ -913,7 +913,7 @@ const DoctorDashboard = () => {
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div onClick={() => setShowXrayModal(true)} className="bg-slate-50 rounded-xl overflow-hidden cursor-pointer transition-all hover:-translate-y-2 hover:shadow-xl border-2 border-slate-200 hover:border-blue-500">
-                      <div className="h-48 bg-slate-900 flex items-center justify-center overflow-hidden">
+                      <div className="sm:h-48 h-39 bg-slate-900 flex items-center justify-center overflow-hidden">
                         <img src={uploadedXray || scan} alt="X-ray" className="h-full w-full object-cover" />
                       </div>
                       <div className="p-4 bg-white">
@@ -922,7 +922,7 @@ const DoctorDashboard = () => {
                       </div>
                     </div>
                     <div onClick={() => setShowBloodTestModal(true)} className="bg-slate-50 rounded-xl overflow-hidden cursor-pointer transition-all hover:-translate-y-2 hover:shadow-xl border-2 border-slate-200 hover:border-blue-500">
-                      <div className="h-48 bg-slate-900 flex items-center justify-center overflow-hidden">
+                      <div className="sm:h-48 h-39 bg-slate-900 flex items-center justify-center overflow-hidden">
                         <img src={uploadedLab || lab} alt="Lab Test" className="h-full w-full object-cover" />
                       </div>
                       <div className="p-4 bg-white">
@@ -969,7 +969,7 @@ const DoctorDashboard = () => {
       {/* X-ray Modal - يستخدم صورة المريض الحقيقية */}
       {showXrayModal && (
         <div className="fixed inset-0 bg-azraq z-50 flex items-center justify-center p-5">
-          <div className="bg-white rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
+          <div className="bg-white rounded-3xl p-4 sm:p-6 lg:p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
            <div className='flex justify-between items-center'>
              <button onClick={() => setShowXrayModal(false)} className="absolute top-3 mb-5 right-6 w-10 h-9  text-black flex items-center justify-center text-2xl hover:bg-red-600  hover:text-white">×</button>
             <h2 className="text-xl font-bold  text-azraq-400  ">X-ray - 12-1-2026</h2>
@@ -987,7 +987,7 @@ const DoctorDashboard = () => {
                 <img 
                   src={uploadedXray || scan} 
                   alt="X-ray" 
-                  className="absolute rounded-lg transition-transform select-none w-1/2" 
+                  className="absolute rounded-lg transition-transform select-none w-full sm:w-1/2" 
                   style={{ 
                     transform: `translate(${xrayPosition.x}px, ${xrayPosition.y}px) scale(${xrayZoom})`,
                     transformOrigin: 'center center',
@@ -1141,9 +1141,9 @@ const DoctorDashboard = () => {
                 
             </div>
               <div className='bg-white p-3'> 
-                        <h2 className='my-3'> Ai Analysis</h2>
-                        <p>Hemoglobin:14.2g/dl(Normal)</p>
-                        <p>WBC : 7,500/ul(Normal)</p>
+                        <h2 className='my-3 text-center'> Ai Analysis</h2>
+                        <p className='text-center'>Hemoglobin:14.2g/dl(Normal)</p>
+                        <p className='text-center'>WBC : 7,500/ul(Normal)</p>
                         </div>
             </div>
           </div>
