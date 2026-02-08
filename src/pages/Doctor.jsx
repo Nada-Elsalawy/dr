@@ -1140,10 +1140,10 @@ const DoctorDashboard = () => {
                 </div>
                 
             </div>
-              <div className='bg-white p-3  sm:p-4 sm:w-auto'> 
+              <div className='bg-white p-3   sm:w-auto'> 
                         <h2 className='my-3 text-center'> Ai Analysis</h2>
-                        <p className='text-center'>Hemoglobin:14.2g/dl(Normal)</p>
-                        <p className='text-center'>WBC : 7,500/ul(Normal)</p>
+                        <p className='text-center sm:px-2'>Hemoglobin:14.2g/dl(Normal)</p>
+                        <p className='text-center sm:px-2'>WBC : 7,500/ul(Normal)</p>
                         </div>
             </div>
           </div>
